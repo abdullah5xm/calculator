@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculator</title>
+  <style type="text/css">
+
+    body {
+      padding: 5px;
+      background: #ECEFF1;
+    }
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: Sans-Serif;
+    }
+
+    #main {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+    }
+
+    .title {
+      text-align: center;
+      font-size: 30px;
+      font-family: cursive;
+    }
+    #form {
+      text-align: center;
+    }
+
+    #form>input {
+      margin: 3px 0;
+      padding: 10px;
+      font-size: 20px;
+      background-color: #E0E0E0;
+      outline: none;
+      font-family: Sans-Serif;
+      font-weight: bolder;
+    }
+    .btn {
+      text-align: center;
+    }
+    .btn button {
+      padding: 10px 20px;
+      font-size: 20px;
+      margin: 0 5px;
+      border-radius: 50%;
+      border: none;
+      outline: none;
+    }
+    .btn button:hover {
+      background: black;
+      color: white;
+    }
+    .btn1 {
+      background: #26A69A;
+    }
+    .btn2 {
+      background: #FFA000;
+    }
+    .btn3 {
+      background: #FF8A80;
+    }
+    .btn4 {
+      background: #7986CB;
+    }
+    .result {
+      font-weight: bolder;
+    }
+    .copy {
+      text-align: center;
+      margin-top: 500px;
+    }
+  </style>
+</head>
+<body>
+  <div id="main">
+    <h3 class="title">Simple Calculator</h3>
+    <br>
+    <form id="form">
+      <input type="number" id="a">
+      <br>
+      <input type="number" id="b">
+    </form>
+    <br>
+    <div class="btn">
+      <button class="btn1" onclick="total1()">+</button>
+      <button class="btn2" onclick="total2()">-</button>
+      <button class="btn3" onclick="total3()">×</button>
+      <button class="btn4" onclick="total4()">÷</button>
+    </div>
+    <br>
+    <p>
+      <span class="result">Result : &nbsp;  </span>
+      <span id="sum"></span>
+    </p>
+  </div>
+
+  <script>
+
+    //addition
+    function total1() {
+      let m = Number(document.getElementById('a').value);
+      let n = Number(document.getElementById('b').value);
+      let sum = m + n;
+      document.getElementById('sum').innerHTML = sum;
+    }
+
+    //substraction
+    function total2() {
+      let m = Number(document.getElementById('a').value);
+      let n = Number(document.getElementById('b').value);
+      let sum = m - n;
+      document.getElementById('sum').innerHTML = sum;
+    }
+
+    //Multiplication
+    function total3() {
+      let m = Number(document.getElementById('a').value);
+      let n = Number(document.getElementById('b').value);
+      let sum = m * n;
+      document.getElementById('sum').innerHTML = sum;
+    }
+
+    //Division
+    function total4() {
+      let m = Number(document.getElementById('a').value);
+      let n = Number(document.getElementById('b').value);
+      let sum = m / n;
+      document.getElementById('sum').innerHTML = sum;
+    }
+  </script>
+  <p class="copy">
+    &copy;samrat, Inc.
+  </p>
+</body>
+</html>
